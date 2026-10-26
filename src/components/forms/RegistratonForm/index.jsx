@@ -11,14 +11,14 @@ function RegistrationForm () {
     birthday: ''
   }
 
-  const handleSubmit = (values, formikBag) => {
+  const handleRegistrationSubmit = (values, formikBag) => {
     formikBag.resetForm()
   }
 
   return (
     <Formik
       initialValues={initialValues}
-      onSubmit={handleSubmit}
+      onSubmit={handleRegistrationSubmit}
       validationSchema={USER_VALIDATION_SCHEMA}
     >
       {formikProps => (
