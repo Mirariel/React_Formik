@@ -1,5 +1,7 @@
-import { Formik, Form, ErrorMessage, Field } from 'formik'
+import { Formik, Form } from 'formik'
 import styles from './../FormStyles.module.sass'
+import Input from '../Input'
+import { USER_VALIDATION_SCHEMA } from '../../../utils/validate/validationSchema'
 
 const initialValues = {
   email: '',
@@ -12,24 +14,28 @@ const handleLoginingSubmit = (values, formikBag) => {
 
 function LoginForm () {
   return (
-    <Formik initialValues={initialValues} onSubmit={handleLoginingSubmit}>
+    <Formik
+      initialValues={initialValues}
+      onSubmit={handleLoginingSubmit}
+      validationSchema={USER_VALIDATION_SCHEMA}
+    >
       {formikProps => (
         <Form className={styles.formContainer}>
-          <label>
-            <span>Email: </span>
-            <Field type='email' name='email' placeholder='Email' autoFocus />
-            <ErrorMessage name='Email' component='div' />
-          </label>
-          <label>
-            <span>Password: </span>
-            <Field
-              type='password'
-              name='password'
-              placeholder='password'
-              autoFocus
-            />
-            <ErrorMessage name='passwords' component='div' />
-          </label>
+          <Input
+            label='Email:'
+            type='email'
+            name='email'
+            placeholder='abc@mail.com'
+            autoFocus
+          />
+
+          <Input
+            label='Password:'
+            type='password'
+            name='password'
+            placeholder='password'
+          />
+
           <button>SignUp</button>
         </Form>
       )}

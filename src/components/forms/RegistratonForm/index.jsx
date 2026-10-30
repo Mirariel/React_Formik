@@ -1,5 +1,4 @@
 import { Formik, Form, ErrorMessage, Field } from 'formik'
-import classNames from 'classnames'
 
 import { USER_VALIDATION_SCHEMA } from '../../../utils/validate/validationSchema'
 import styles from './../FormStyles.module.sass'
@@ -11,19 +10,13 @@ function RegistrationForm () {
     lastName: '',
     email: '',
     password: '',
+    passwordConfirmation: '',
     phone: '',
     birthday: ''
   }
 
   const handleRegistrationSubmit = (values, formikBag) => {
     formikBag.resetForm()
-  }
-
-  const classes = {
-    erorr: styles.erorr,
-    input: styles.input,
-    valid: styles.valid,
-    invalid: styles.invalid
   }
 
   return (
@@ -41,34 +34,30 @@ function RegistrationForm () {
               name='firstName'
               placeholder='First name'
               autoFocus
-              classes={classes}
             />
-
             <Input
               label='Last name:'
               type='text'
               name='lastName'
               placeholder='Last name'
-              autoFocus
-              classes={classes}
             />
-
             <Input
               label='Email:'
               type='email'
               name='email'
               placeholder='Your Email'
-              autoFocus
-              classes={classes}
             />
-
             <Input
               label='Password:'
               type='password'
               name='password'
               placeholder='password'
-              autoFocus
-              classes={classes}
+            />
+
+            <Input
+              label='Repeat your password:'
+              type='password'
+              name='passwordConfirmation'
             />
 
             <Input
@@ -76,18 +65,9 @@ function RegistrationForm () {
               type='tel'
               name='phone'
               placeholder='+380*********'
-              autoFocus
-              classes={classes}
             />
 
-            <Input
-              label='Birthday:'
-              type='date'
-              name='birthday'
-              autoFocus
-              classes={classes}
-            />
-
+            <Input label='Birthday:' type='date' name='birthday' />
             <button type='submit'>Registration</button>
           </Form>
         )

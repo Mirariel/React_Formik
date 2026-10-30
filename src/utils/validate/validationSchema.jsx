@@ -25,6 +25,10 @@ export const USER_VALIDATION_SCHEMA = yup.object({
       ERROR_MESSAGES.password
     )
     .required(),
+  passwordConfirmation: yup
+    .string()
+    .oneOf([yup.ref('password')])
+    .required(),
   phone: yup
     .string()
     .length(13)
