@@ -1,14 +1,14 @@
-import { Link } from "react-router"
-
+import { Link } from 'react-router'
+import styles from './Header.module.sass'
 
 function Header () {
   return (
-    <header>
-      <div>Formik</div>
-      <nav>
-        <Link to='/'>Home</Link>
-        <Link to='registration'>Registration</Link>
-        <Link to='signUp'>SignUp</Link>
+    <header className={styles.header}>
+      <div className={styles.logo}>Formik</div>
+      <nav className={styles.nav}>
+        <Link className={styles.link} to='/'>Home</Link>
+        <Link className={styles.link} to='registration'>Registration</Link>
+        <Link className={styles.link} to='signUp'>SignUp</Link>
       </nav>
     </header>
   )

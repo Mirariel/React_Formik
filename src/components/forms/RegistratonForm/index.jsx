@@ -33,7 +33,6 @@ function RegistrationForm () {
       validationSchema={USER_VALIDATION_SCHEMA}
     >
       {formikProps => {
-
         return (
           <Form className={styles.formContainer}>
             <Input
@@ -85,7 +84,6 @@ function RegistrationForm () {
               label='Birthday:'
               type='date'
               name='birthday'
-              placeholder='Date your birthday'
               autoFocus
               classes={classes}
             />

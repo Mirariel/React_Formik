@@ -4,7 +4,7 @@ import styles from './../FormPage.module.sass'
 function RegistrationPage () {
   return (
     <div className={styles.container}>
-      <h2>Registration</h2>
+      <h2 className={styles.h2}>Registration</h2>
       <RegistrationForm />
     </div>
   )
