@@ -1,8 +1,9 @@
 import LoginForm from '../../components/forms/LoginForm'
+import styles from './../FormPage.module.sass'
 
 function SignUpPage () {
   return (
-    <div>
+    <div className={styles.container}>
       <h2>SignUp</h2>
       <LoginForm />
     </div>

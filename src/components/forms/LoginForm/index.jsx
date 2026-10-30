@@ -1,4 +1,5 @@
 import { Formik, Form, ErrorMessage, Field } from 'formik'
+import styles from './../FormStyles.module.sass'
 
 const initialValues = {
   email: '',
@@ -13,7 +14,7 @@ function LoginForm () {
   return (
     <Formik initialValues={initialValues} onSubmit={handleLoginingSubmit}>
       {formikProps => (
-        <Form>
+        <Form className={styles.formContainer}>
           <label>
             <span>Email: </span>
             <Field type='email' name='email' placeholder='Email' autofocus />

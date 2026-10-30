@@ -1,0 +1,30 @@
+.formContainer 
+    display: flex
+    flex-direction: column
+    width: 300px
+    border: 1px solid black
+    gap: 15px
+    padding: 20px
+
+    label
+        position: relative
+
+.error 
+    position: absolute
+    top: 100%
+    right: 0
+    color: red
+    font-size: 14px
+
+.input
+    padding: 4px
+    &:active
+        border: 2px solid black
+
+.valid
+    border: 2px solid #18b23290
+    background-color:  #29d54690
+
+.invalid
+    border: 2px solid red
+    background-color: #dd282891
