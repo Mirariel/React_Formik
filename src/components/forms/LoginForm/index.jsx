@@ -17,7 +17,7 @@ function LoginForm () {
         <Form className={styles.formContainer}>
           <label>
             <span>Email: </span>
-            <Field type='email' name='email' placeholder='Email' autofocus />
+            <Field type='email' name='email' placeholder='Email' autoFocus />
             <ErrorMessage name='Email' component='div' />
           </label>
           <label>
@@ -26,7 +26,7 @@ function LoginForm () {
               type='password'
               name='password'
               placeholder='password'
-              autofocus
+              autoFocus
             />
             <ErrorMessage name='passwords' component='div' />
           </label>
